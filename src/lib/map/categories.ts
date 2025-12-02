@@ -10,35 +10,36 @@ export interface Category {
   icon: string;
 }
 
+// Unique marker colors - no duplicates
 export const categories: Record<CategoryId, Category> = {
   sharing: {
     id: "sharing",
     nameKey: "category.sharing",
-    color: "#00E5E0", // Turquoise
+    color: "#00E5E0", // Türkis (brand primary)
     icon: "🔄",
   },
   jobs: {
     id: "jobs",
     nameKey: "category.jobs",
-    color: "#FFD700", // Gold
+    color: "#4BC9FF", // Hell-Digital-Blau
     icon: "💼",
   },
   swap: {
     id: "swap",
     nameKey: "category.swap",
-    color: "#FF6B6B", // Coral
+    color: "#FF9F43", // Warm-Orange
     icon: "🔁",
   },
   food: {
     id: "food",
     nameKey: "category.food",
-    color: "#4ECDC4", // Mint
+    color: "#FF5A8E", // Pink-Rot
     icon: "🍽️",
   },
   events: {
     id: "events",
     nameKey: "category.events",
-    color: "#9B59B6", // Purple
+    color: "#B15CFF", // Violett
     icon: "📅",
   },
 };

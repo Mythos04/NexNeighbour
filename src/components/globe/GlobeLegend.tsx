@@ -12,23 +12,23 @@ export default function GlobeLegend() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5 }}
-      className="absolute bottom-4 left-4 p-4 bg-[#0B1014]/80 backdrop-blur-md 
-                 border border-[#00E5E0]/20 rounded-xl"
+      className="absolute bottom-4 left-4 p-4 bg-[#0B1014]/85 backdrop-blur-md 
+                 border border-[#00E5E0]/20 rounded-xl shadow-[0_0_30px_#00E5E010]"
     >
-      <h3 className="text-sm font-medium text-white/80 mb-2">
+      <h3 className="text-sm font-semibold text-white mb-3">
         {t("map.legend.title")}
       </h3>
-      <div className="space-y-1.5">
+      <div className="space-y-2">
         {categoryList.map((category) => (
-          <div key={category.id} className="flex items-center gap-2 text-sm">
+          <div key={category.id} className="flex items-center gap-3 text-sm">
             <span
-              className="w-3 h-3 rounded-full shadow-lg"
+              className="w-3.5 h-3.5 rounded-full"
               style={{
                 backgroundColor: category.color,
-                boxShadow: `0 0 8px ${category.color}40`,
+                boxShadow: `0 0 10px ${category.color}80`,
               }}
             />
-            <span className="text-white/70">
+            <span className="text-white/80">
               {category.icon} {t(category.nameKey)}
             </span>
           </div>

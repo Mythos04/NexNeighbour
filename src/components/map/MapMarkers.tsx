@@ -106,24 +106,28 @@ export default function MapMarkers({
             }}
           >
             <Popup className="custom-popup">
-              <div className="p-2 min-w-[200px]">
+              <div className="p-3 min-w-[220px]">
                 <div className="flex items-center gap-2 mb-2">
-                  <span>{category.icon}</span>
+                  <span className="text-lg">{category.icon}</span>
                   <span
-                    className="text-xs px-2 py-0.5 rounded-full"
-                    style={{ backgroundColor: `${category.color}20`, color: category.color }}
+                    className="text-xs px-2.5 py-1 rounded-full font-medium"
+                    style={{ 
+                      backgroundColor: `${category.color}20`, 
+                      color: category.color,
+                      boxShadow: `0 0 8px ${category.color}40`
+                    }}
                   >
                     {t(category.nameKey)}
                   </span>
                 </div>
-                <h3 className="font-semibold text-[#0B1014] mb-1">
+                <h3 className="font-semibold text-white mb-1.5 text-base">
                   {marker.title}
                 </h3>
-                <p className="text-sm text-gray-600 mb-2">
+                <p className="text-sm text-white/70 mb-2">
                   {marker.description}
                 </p>
                 {marker.address && (
-                  <p className="text-xs text-gray-500 mb-3">📍 {marker.address}</p>
+                  <p className="text-xs text-white/50 mb-3">📍 {marker.address}</p>
                 )}
                 <Button
                   size="sm"
